@@ -7,7 +7,6 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import javax.annotation.Nonnull;
 import mezz.jei.api.IModPlugin;
@@ -258,28 +257,27 @@ public class JEIPlugin implements IModPlugin {
     @Nonnull
     final List<CompostRecipe> recipes = ExNihiloRegistries.COMPOST_REGISTRY.getRecipeList();
     registration.addRecipes(RecipeTypes.COMPOST, recipes);
-    log.info("Compost Recipes Loaded: " + recipes.size());
+    log.info("Compost Recipes Loaded: {}", recipes.size());
   }
 
   private void registerHarvest(@Nonnull final IRecipeRegistration registration) {
     @Nonnull
     final List<HarvestRecipe> harvestRecipes = ExNihiloRegistries.CROOK_REGISTRY.getRecipeList();
     registration.addRecipes(RecipeTypes.HARVEST, harvestRecipes);
-    log.info("Harvest Recipes Loaded: " + harvestRecipes.size());
+    log.info("Harvest Recipes Loaded: {}", harvestRecipes.size());
   }
 
   private void registerFiredMelting(@Nonnull final IRecipeRegistration registration) {
-    @Nonnull
-    final List<JEICrucibleRecipe> recipes = getCrucibleRecipes();
+    @Nonnull final List<JEICrucibleRecipe> recipes = getCrucibleRecipes();
     registration.addRecipes(RecipeTypes.FIRED_MELTING, recipes);
-    log.info("Fired Melting Recipes Loaded: " + recipes.size());
+    log.info("Fired Melting Recipes Loaded: {}", recipes.size());
   }
 
   private void registerPrecipitate(@Nonnull final IRecipeRegistration registration) {
     @Nonnull
     final List<PrecipitateRecipe> recipes = ExNihiloRegistries.FLUID_BLOCK_REGISTRY.getRecipeList();
     registration.addRecipes(RecipeTypes.PRECIPITATE, recipes);
-    log.info("Precipitate Recipes Loaded: " + recipes.size());
+    log.info("Precipitate Recipes Loaded: {}", recipes.size());
   }
 
   private void registerSolidifying(@Nonnull final IRecipeRegistration registration) {
@@ -287,7 +285,7 @@ public class JEIPlugin implements IModPlugin {
     final List<SolidifyingRecipe> recipes =
         ExNihiloRegistries.FLUID_ON_TOP_REGISTRY.getRecipeList();
     registration.addRecipes(RecipeTypes.SOLIDIFYING, recipes);
-    log.info("Solidifying Recipes Loaded: " + recipes.size());
+    log.info("Solidifying Recipes Loaded: {}", recipes.size());
   }
 
   private void registerTransition(@Nonnull final IRecipeRegistration registration) {
@@ -295,20 +293,20 @@ public class JEIPlugin implements IModPlugin {
     final List<TransitionRecipe> recipes =
         ExNihiloRegistries.FLUID_TRANSFORM_REGISTRY.getRecipeList();
     registration.addRecipes(RecipeTypes.TRANSITION, recipes);
-    log.info("Transition Recipes Loaded: " + recipes.size());
+    log.info("Transition Recipes Loaded: {}", recipes.size());
   }
 
   private void registerCrushing(@Nonnull final IRecipeRegistration registration) {
     @Nonnull
     final List<CrushingRecipe> recipes = ExNihiloRegistries.HAMMER_REGISTRY.getRecipeList();
     registration.addRecipes(RecipeTypes.CRUSHING, recipes);
-    log.info("Crushing Recipes Loaded: " + recipes.size());
+    log.info("Crushing Recipes Loaded: {}", recipes.size());
   }
 
   private void registerHeat(@Nonnull final IRecipeRegistration registration) {
     @Nonnull final List<HeatRecipe> recipes = ExNihiloRegistries.HEAT_REGISTRY.getRecipeList();
     registration.addRecipes(RecipeTypes.HEAT, recipes);
-    log.info("Heat Recipes Loaded: " + recipes.size());
+    log.info("Heat Recipes Loaded: {}", recipes.size());
   }
 
   private List<JEISieveRecipe> getSiftingRecipes(final boolean isWaterLogged) {
@@ -349,7 +347,7 @@ public class JEIPlugin implements IModPlugin {
                             .map(results -> new JEISieveRecipe(input, results));
                       });
             })
-        .collect(Collectors.toList());
+        .toList();
   }
 
   public List<JEICrucibleRecipe> getCrucibleRecipes() {
@@ -376,7 +374,7 @@ public class JEIPlugin implements IModPlugin {
                               partition,
                               crucibleRecipe.getResultFluid()));
             })
-        .collect(Collectors.toList());
+        .toList();
   }
 
   private void registerSifting(@Nonnull final IRecipeRegistration registration) {
@@ -384,7 +382,7 @@ public class JEIPlugin implements IModPlugin {
     @Nonnull final List<JEISieveRecipe> wetSieveRecipes = getSiftingRecipes(true);
     registration.addRecipes(RecipeTypes.DRY_SIFTING, drySieveRecipes);
     registration.addRecipes(RecipeTypes.WET_SIFTING, wetSieveRecipes);
-    log.info("Sifting Recipes Loaded: " + (drySieveRecipes.size() + wetSieveRecipes.size()));
+    log.info("Sifting Recipes Loaded: {}", (drySieveRecipes.size() + wetSieveRecipes.size()));
   }
 
   private void registerMelting(@Nonnull final IRecipeRegistration registration) {
@@ -392,8 +390,8 @@ public class JEIPlugin implements IModPlugin {
     final List<JEICrucibleRecipe> recipes =
         getCrucibleRecipes().stream()
             .filter(recipe -> recipe.getCrucibleType() == CrucibleType.WOOD)
-            .collect(Collectors.toList());
+            .toList();
     registration.addRecipes(RecipeTypes.MELTING, recipes);
-    log.info("Melting Recipes Loaded: " + recipes.size());
+    log.info("Melting Recipes Loaded: {}", recipes.size());
   }
 }

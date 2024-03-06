@@ -1,5 +1,9 @@
 package novamachina.exnjei.jei.heat;
 
+import java.awt.*;
+import java.util.List;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.gui.drawable.IDrawableStatic;
@@ -25,12 +29,6 @@ import net.minecraft.world.level.material.Fluid;
 import net.neoforged.neoforge.fluids.FluidStack;
 import novamachina.exnihilosequentia.common.utility.ExNihiloConstants;
 import novamachina.exnihilosequentia.world.item.crafting.HeatRecipe;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import java.awt.*;
-import java.util.Arrays;
-import java.util.List;
 
 public class HeatRecipeCategory implements IRecipeCategory<HeatRecipe> {
 
@@ -107,11 +105,10 @@ public class HeatRecipeCategory implements IRecipeCategory<HeatRecipe> {
     ResourceLocation blockId = BuiltInRegistries.BLOCK.getKey(blockInput);
     if (BuiltInRegistries.FLUID.containsKey(blockId)) {
       Fluid fluid = BuiltInRegistries.FLUID.get(blockId);
-      if (fluid != null) {
-        builder
-            .addSlot(RecipeIngredientRole.INPUT, 1, 17)
-            .addIngredients(NeoForgeTypes.FLUID_STACK, List.of(new FluidStack(fluid, 1000)));
-      }
+      builder
+          .addSlot(RecipeIngredientRole.INPUT, 1, 17)
+          .addIngredients(NeoForgeTypes.FLUID_STACK, List.of(new FluidStack(fluid, 1000)));
+
     } else {
       @Nonnull ItemLike input = recipe.getInputBlock();
       if (input == Blocks.FIRE || input == Blocks.SOUL_FIRE) {

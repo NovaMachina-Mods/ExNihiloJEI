@@ -1,5 +1,7 @@
 package novamachina.exnjei.jei.crushing;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.gui.drawable.IDrawableStatic;
@@ -13,9 +15,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import novamachina.exnihilosequentia.common.utility.ExNihiloConstants;
 import novamachina.exnihilosequentia.world.item.crafting.CrushingRecipe;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 public class CrushingRecipeCategory implements IRecipeCategory<CrushingRecipe> {
 

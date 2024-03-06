@@ -1,5 +1,7 @@
 package novamachina.exnjei.jei.melting;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.builder.IRecipeSlotBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -16,14 +18,7 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.fluids.FluidStack;
 import novamachina.exnihilosequentia.common.utility.ExNihiloConstants;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
 public class MeltingRecipeCategory implements IRecipeCategory<JEICrucibleRecipe> {
-
-  @Nonnull
-  public static final ResourceLocation UID =
-      new ResourceLocation(ExNihiloConstants.ModIds.EX_NIHILO_SEQUENTIA, "melting");
 
   @Nonnull
   private static final ResourceLocation texture =
@@ -85,13 +80,7 @@ public class MeltingRecipeCategory implements IRecipeCategory<JEICrucibleRecipe>
       @Nonnull final ItemStack stack = recipe.getInputs().get(i);
       IRecipeSlotBuilder input =
           builder.addSlot(RecipeIngredientRole.INPUT, slotX, slotY).addItemStack(stack);
-
-      if (uid.equals(
-          new ResourceLocation(ExNihiloConstants.ModIds.EX_NIHILO_SEQUENTIA, "fired_crucible"))) {
-        input.addTooltipCallback(new FiredCrucibleTooltipCallback());
-      } else {
-        input.addTooltipCallback(new WoodCrucibleTooltipCallback());
-      }
+      input.addTooltipCallback(new CrucibleTooltipCallback());
     }
   }
 }

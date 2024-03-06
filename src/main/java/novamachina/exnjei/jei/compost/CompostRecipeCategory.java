@@ -1,6 +1,8 @@
 package novamachina.exnjei.jei.compost;
 
 import com.google.common.collect.Lists;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.builder.IRecipeSlotBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -16,9 +18,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
 import novamachina.exnihilosequentia.common.utility.ExNihiloConstants;
 import novamachina.exnihilosequentia.world.item.crafting.CompostRecipe;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 public class CompostRecipeCategory implements IRecipeCategory<CompostRecipe> {
 

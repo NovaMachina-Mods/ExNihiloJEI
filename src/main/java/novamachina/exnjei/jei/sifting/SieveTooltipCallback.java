@@ -2,6 +2,9 @@ package novamachina.exnjei.jei.sifting;
 
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
+import java.util.List;
+import java.util.Optional;
+import javax.annotation.Nonnull;
 import mezz.jei.api.gui.ingredient.IRecipeSlotTooltipCallback;
 import mezz.jei.api.gui.ingredient.IRecipeSlotView;
 import mezz.jei.api.ingredients.ITypedIngredient;
@@ -13,10 +16,6 @@ import novamachina.exnihilosequentia.world.item.MeshItem;
 import novamachina.exnihilosequentia.world.item.crafting.MeshWithChance;
 import novamachina.exnihilosequentia.world.item.crafting.SiftingRecipe;
 import novamachina.novacore.util.StringUtils;
-
-import javax.annotation.Nonnull;
-import java.util.List;
-import java.util.Optional;
 
 public class SieveTooltipCallback implements IRecipeSlotTooltipCallback {
 

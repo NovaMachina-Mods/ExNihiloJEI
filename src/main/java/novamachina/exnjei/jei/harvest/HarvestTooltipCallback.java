@@ -1,5 +1,9 @@
 package novamachina.exnjei.jei.harvest;
 
+import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.atomic.AtomicBoolean;
+import javax.annotation.Nonnull;
 import mezz.jei.api.gui.ingredient.IRecipeSlotTooltipCallback;
 import mezz.jei.api.gui.ingredient.IRecipeSlotView;
 import mezz.jei.api.ingredients.ITypedIngredient;
@@ -8,11 +12,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import novamachina.exnihilosequentia.world.item.crafting.HarvestRecipe;
 import novamachina.novacore.util.StringUtils;
-
-import javax.annotation.Nonnull;
-import java.util.List;
-import java.util.Optional;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 public class HarvestTooltipCallback implements IRecipeSlotTooltipCallback {
 

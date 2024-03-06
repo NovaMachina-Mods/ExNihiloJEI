@@ -1,5 +1,7 @@
 package novamachina.exnjei.jei.precipitate;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.gui.drawable.IDrawableStatic;
@@ -13,9 +15,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import novamachina.exnihilosequentia.common.utility.ExNihiloConstants;
 import novamachina.exnihilosequentia.world.item.crafting.PrecipitateRecipe;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 public class PrecipitateRecipeCategory implements IRecipeCategory<PrecipitateRecipe> {
 

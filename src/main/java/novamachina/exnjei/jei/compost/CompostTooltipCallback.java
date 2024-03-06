@@ -1,5 +1,7 @@
 package novamachina.exnjei.jei.compost;
 
+import java.util.List;
+import java.util.Optional;
 import mezz.jei.api.gui.ingredient.IRecipeSlotTooltipCallback;
 import mezz.jei.api.gui.ingredient.IRecipeSlotView;
 import mezz.jei.api.ingredients.ITypedIngredient;
@@ -8,9 +10,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import novamachina.exnihilosequentia.common.Config;
 import novamachina.exnihilosequentia.common.registries.ExNihiloRegistries;
-
-import java.util.List;
-import java.util.Optional;
 
 public class CompostTooltipCallback implements IRecipeSlotTooltipCallback {
 

@@ -1,13 +1,12 @@
 package novamachina.exnjei.jei.sifting;
 
+import javax.annotation.Nonnull;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.RecipeType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import novamachina.exnihilosequentia.common.utility.ExNihiloConstants;
 import org.jetbrains.annotations.NotNull;
-
-import javax.annotation.Nonnull;
 
 public class WetSiftingRecipeCategory extends AbstractSieveRecipeCategory {
 

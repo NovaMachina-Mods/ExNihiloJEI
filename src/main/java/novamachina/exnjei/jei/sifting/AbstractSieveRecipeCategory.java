@@ -1,5 +1,6 @@
 package novamachina.exnjei.jei.sifting;
 
+import javax.annotation.Nonnull;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -11,8 +12,6 @@ import mezz.jei.api.recipe.category.IRecipeCategory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import novamachina.exnihilosequentia.common.utility.ExNihiloConstants;
-
-import javax.annotation.Nonnull;
 
 public abstract class AbstractSieveRecipeCategory implements IRecipeCategory<JEISieveRecipe> {
 

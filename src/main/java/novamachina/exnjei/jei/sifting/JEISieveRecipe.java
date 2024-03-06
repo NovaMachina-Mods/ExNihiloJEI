@@ -1,11 +1,9 @@
 package novamachina.exnjei.jei.sifting;
 
+import java.util.List;
+import javax.annotation.Nonnull;
 import net.minecraft.world.item.ItemStack;
 import novamachina.exnihilosequentia.world.item.crafting.SiftingRecipe;
-
-import javax.annotation.Nonnull;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class JEISieveRecipe {
 
@@ -15,8 +13,7 @@ public class JEISieveRecipe {
   public JEISieveRecipe(
       @Nonnull final List<List<ItemStack>> input, @Nonnull final List<SiftingRecipe> results) {
     this.inputs = input;
-    this.results =
-        results.parallelStream().map(SiftingRecipe::getDrop).collect(Collectors.toList());
+    this.results = results.parallelStream().map(SiftingRecipe::getDrop).toList();
   }
 
   @Nonnull

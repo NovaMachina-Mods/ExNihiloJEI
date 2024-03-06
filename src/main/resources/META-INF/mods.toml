@@ -8,7 +8,7 @@ license="CC BY-NC-SA 4.0"
     logoFile="exnjei.png"
     version="1.0.0"
     displayName="Ex Nihilo: Sequentia - JEI Addon"
-    updateJSONURL="https://api.modrinth.com/updates/000000/forge_updates.json"
+    updateJSONURL="https://api.modrinth.com/updates/90jIwmar/forge_updates.json"
     authors="NovaMachina"
     description='''Adds support for JEI to Ex Nihilo: Sequentia'''
 
@@ -38,5 +38,5 @@ license="CC BY-NC-SA 4.0"
    type="required"
    ordering="AFTER"
    side="BOTH"
-   versionRange="[17.3.0.0, 17.3.1.0)"
+   versionRange="[17.3.0.0, 18.0.0.0)"
 
