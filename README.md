@@ -42,7 +42,7 @@ repositories {
 }
 
 dependencies {
-    implementation(fg.deobf("novamachina.exnjei:ExNihiloJEI:${exnjei_version}"))
+    implementation(fg.deobf("novamachina.exnjei:exnjei:${exnjei_version}"))
 }
 ```
 
