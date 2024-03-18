@@ -1,0 +1,14 @@
+{
+  "jei.category.compost": "Composting",
+  "jei.category.crushing": "Crushing",
+  "jei.category.dry_sifting": "Sifting",
+  "jei.category.fired_melting": "Fired Crucible Melting",
+  "jei.category.harvest": "Harvesting",
+  "jei.category.heat": "Crucible Heat Sources",
+  "jei.category.melting": "Crucible Melting",
+  "jei.category.precipitate": "Precipitate",
+  "jei.category.solidifying": "Solidifying",
+  "jei.category.transition": "Transition",
+  "jei.category.wet_sifting": "Waterlogged Sifting",
+  "jei.sieve.dropChance": "Drop Chance"
+}
