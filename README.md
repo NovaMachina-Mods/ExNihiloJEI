@@ -1,12 +1,13 @@
-[//]: # (![CurseForge Downloads]&#40;https://img.shields.io/curseforge/dt/923669?style=for-the-badge&logo=curseforge&#41;)
+![CurseForge Downloads](https://img.shields.io/curseforge/dt/983646?style=for-the-badge&logo=curseforge)
+![CurseForge Downloads](https://img.shields.io/curseforge/game-versions/983646?style=for-the-badge&logo=curseforge)
+![Modrinth Downloads](https://img.shields.io/modrinth/dt/90jIwmar?style=for-the-badge&logo=modrinth)
+![Modrinth Downloads](https://img.shields.io/modrinth/game-versions/90jIwmar?style=for-the-badge&logo=modrinth)
+![Static Badge](https://img.shields.io/badge/license-CC_BY--NC--SA_4.0-green?style=for-the-badge)
+![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/NovaMachina-Mods/ExNihiloJEI?style=for-the-badge&logo=github)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/NovaMachina-Mods/ExNihiloJEI/build_1_20.yaml?style=for-the-badge&logo=github&label=1.20%20Build)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/NovaMachina-Mods/ExNihiloJEI/build_1_20_dev.yaml?style=for-the-badge&logo=github&label=1.20-dev%20Build)
 
-[//]: # (![CurseForge Version]&#40;https://img.shields.io/curseforge/v/923669?style=for-the-badge&logo=curseforge&#41;)
-
-[//]: # (![Modrinth Downloads]&#40;https://img.shields.io/modrinth/dt/engHtMVe?style=for-the-badge&logo=modrinth&#41;)
-
-[//]: # (![Modrinth Version]&#40;https://img.shields.io/modrinth/v/engHtMVe?style=for-the-badge&logo=modrinth&#41;)
-
-# Ex Nihilo: Sequentia - JEI Addon for Minecraft
+# Ex Nihilo: Sequentia - JEI Addon
 
 Addon for Ex Nihilo: Sequentia to add support for JEI
 
@@ -35,20 +36,20 @@ Add the following to your `build.gradle`:
 ```groovy
 repositories {
     maven {
-        url = "https://dl.cloudsmith.io/public/novamachina-mods/releases/maven/"
+        url = "https://dl.cloudsmith.io/public/novamachina-mods/release/maven/"
 
     }
 }
 
 dependencies {
-    implementation "novamachina.exnjei:exnjei:${exnjei_version}"
+    implementation(fg.deobf("novamachina.exnjei:exnjei:${exnjei_version}"))
 }
 ```
 
-Add the following to your `gradle.properties` (see [Maven](https://cloudsmith.io/~novamachina-mods/repos/ex-nihilo-sequentia/packages/) for the list of available versions):
+Add the following to your `gradle.properties` (see [Maven](https://cloudsmith.io/~novamachina-mods/repos/release/packages/) for the list of available versions):
 
 ```properties
-exnjei_version: 1.20.4-1.0.0.build.1
+exnjei_version: 1.20.4-1.0.0
 ```
 
 [![Hosted By: Cloudsmith](https://img.shields.io/badge/OSS%20hosting%20by-cloudsmith-blue?logo=cloudsmith&style=for-the-badge)](https://cloudsmith.com)
